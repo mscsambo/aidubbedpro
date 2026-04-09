@@ -90,7 +90,7 @@
   .drop-zone {
     border: 1.5px dashed var(--border);
     border-radius: 16px;
-    padding: 3rem 2rem;
+    padding: 1.25rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
