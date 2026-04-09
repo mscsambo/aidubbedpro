@@ -104,7 +104,8 @@
     border-color: var(--accent);
     background: rgba(0,229,255,0.03);
   }
-  .drop-zone input { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; }
+  .drop-zone input { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%;  padding: 1.25rem 2rem;
+    gap: 0.5rem; }
   .drop-icon { font-size: 2.5rem; opacity: 0.5; }
   .drop-title { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; }
   .drop-sub { font-size: 0.7rem; color: var(--muted); }
