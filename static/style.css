@@ -1,0 +1,433 @@
+/* ==================== GLOBAL STYLES ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+/* ==================== APP SHELL ==================== */
+.app-shell {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  padding-bottom: 80px;
+}
+
+/* ==================== HERO CARD ==================== */
+.hero-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 32px 16px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.hero-card .eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.hero-card h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.hero-card h1 span {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.hero-card p {
+  font-size: 14px;
+  margin-bottom: 16px;
+  opacity: 0.95;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.meta-row div {
+  flex: 1;
+  text-align: center;
+}
+
+.meta-row small {
+  display: block;
+  font-size: 12px;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.meta-row b {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ==================== CARDS ==================== */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.card h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.card ol {
+  margin-left: 20px;
+  margin-bottom: 12px;
+}
+
+.card li {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+/* ==================== PLAN GRID ==================== */
+.plan-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.plan {
+  background: #f5f5f5;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  padding: 16px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.plan:hover {
+  border-color: #667eea;
+  background: #f0f0ff;
+}
+
+.plan.active {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.plan span {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.plan b {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* ==================== QUANTITY GRID ==================== */
+.qty-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.qty {
+  background: #f5f5f5;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.qty:hover {
+  border-color: #667eea;
+  background: #f0f0ff;
+}
+
+.qty.active {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+/* ==================== DETAILS CARD ==================== */
+.card.details {
+  margin-bottom: 80px;
+}
+
+.divider {
+  height: 1px;
+  background: #e0e0e0;
+  margin: 16px 0;
+}
+
+#detailsCard b {
+  color: #667eea;
+  font-weight: 600;
+}
+
+/* ==================== BUTTONS ==================== */
+.buy-btn {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  max-width: calc(600px - 32px);
+  margin: 0 auto;
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.4);
+}
+
+.buy-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(102, 126, 234, 0.6);
+}
+
+.buy-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.buy-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  width: 100%;
+  padding: 12px;
+  background: #f5f5f5;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  color: #667eea;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 12px;
+}
+
+.secondary-btn:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* ==================== STATUS MESSAGE ==================== */
+.status {
+  position: fixed;
+  bottom: 80px;
+  left: 16px;
+  right: 16px;
+  max-width: calc(600px - 32px);
+  margin: 0 auto;
+  padding: 12px;
+  background: #fff3cd;
+  color: #856404;
+  border-radius: 6px;
+  font-size: 12px;
+  text-align: center;
+  display: none;
+  animation: slideUp 0.3s ease;
+}
+
+.status.show {
+  display: block;
+}
+
+.status.error {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.status.success {
+  background: #d4edda;
+  color: #155724;
+}
+
+/* ==================== RESULT CARD ==================== */
+.card.result {
+  background: #d4edda;
+  color: #155724;
+}
+
+.card.result h2 {
+  color: #155724;
+}
+
+.card.result.hidden {
+  display: none;
+}
+
+#accounts {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 12px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  word-break: break-all;
+}
+
+.account-item {
+  padding: 8px;
+  margin-bottom: 8px;
+  background: #f8f9fa;
+  border-left: 3px solid #667eea;
+  border-radius: 4px;
+}
+
+/* ==================== HELPER CLASSES ==================== */
+.muted {
+  color: #999;
+  font-size: 14px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ==================== LOADING STATE ==================== */
+.loading {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 480px) {
+  .app-shell {
+    padding: 12px;
+    padding-bottom: 70px;
+  }
+
+  .hero-card {
+    padding: 24px 12px;
+  }
+
+  .hero-card h1 {
+    font-size: 24px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .plan-grid {
+    gap: 8px;
+  }
+
+  .plan {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+
+  .qty-grid {
+    gap: 8px;
+  }
+
+  .buy-btn,
+  .status {
+    left: 12px;
+    right: 12px;
+    max-width: calc(100% - 24px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
